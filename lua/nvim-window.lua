@@ -88,6 +88,7 @@ local config = {
 	-- - "status": renders the hints to a string and calls `redrawstatus`,
 	--   allowing you to show the hints in a status or winbar line
 	render = "float",
+	flash_duration = 1000,
 }
 
 local hints = {}
@@ -280,10 +281,12 @@ local function swap_with(stay, winid)
 
 	if not stay then
 		api.nvim_set_current_win(winid)
+		flash_highlight(winid, config.flash_duration, "WindowPickerSwap")
+	else
+		flash_highlight(cur_winid, config.flash_duration, "WindowPickerSwap")
 	end
 
 	-- flash_highlight(winid, M.config.flash_duration, "WindowPickerSwap")
-	flash_highlight(winid, 600, "WindowPickerSwap")
 end
 
 local function zap_with(winid, force)
@@ -341,8 +344,9 @@ function M.pick()
 	local window = get_user_choice()
 	if window then
 		api.nvim_set_current_win(window)
-		swap_with(true, window)
+		flash_highlight(window, config.flash_duration, "WindowPicker")
 	end
+	-- flash_highlight(window, 1000, "WindowPickerPick")
 end
 
 function M.swap(stay)
