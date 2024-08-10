@@ -262,7 +262,7 @@ end
 
 vim.cmd("hi default WindowPicker     guifg=#ededed guibg=#5e81ac gui=bold")
 -- vim.cmd("hi default WindowPickerSwap guifg=#ededed guibg=#b48ead gui=bold")
-vim.cmd("hi default WindowPickerSwap guifg=#ededed guibg=#ff79c6 gui=bold")
+vim.cmd("hi default WindowPickerSwap guifg=#ededed guibg=#9400d3 gui=bold")
 vim.cmd("hi default WindowPickerZap  guifg=#ededed guibg=#bf616a gui=bold")
 
 M.select = select
