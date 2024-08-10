@@ -14,7 +14,7 @@ local float_width = 6
 
 local config = {
 	-- The characters available for hinting windows.
-	chars = {
+	--[[ chars = {
 		"a",
 		"b",
 		"c",
@@ -27,6 +27,34 @@ local config = {
 		"j",
 		"k",
 		"l",
+		"m",
+		"n",
+		"o",
+		"p",
+		"q",
+		"r",
+		"s",
+		"t",
+		"u",
+		"v",
+		"w",
+		"x",
+		"y",
+		"z",
+	}, ]]
+	chars = {
+		"j",
+		"f",
+		"k",
+		"h",
+		"d",
+		"l",
+		"a",
+		"b",
+		"c",
+		"e",
+		"g",
+		"i",
 		"m",
 		"n",
 		"o",
